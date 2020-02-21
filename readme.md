@@ -1,22 +1,27 @@
 # Prequisite
 
-ROS Kinetic Kame
-
+* Install [ROS Kinetic Kame](http://wiki.ros.org/kinetic/Installation/Ubuntu)
+* Install boost library(1.58)
+    ```
+    sudo apt install libboost-all-dev
+    ```
 
 # Getting Started
 
-* First, turn on ros core
+1. First, turn on ros core
 
     ```bash
     roscore
     ```
 
-* Create another terminal (ctrl + alt + t)
+1. Create another terminal (ctrl + alt + t)
 
     ```bash
     rosrun tutorial_0 tutorial_0_publisher 
     ```
-* Again, create another terminal (ctrl + alt + t)
+
+
+1. Again, create another terminal (ctrl + alt + t)
     ```bash
     rosrun tutorial_0 tutorial_0_subscriber
     ```

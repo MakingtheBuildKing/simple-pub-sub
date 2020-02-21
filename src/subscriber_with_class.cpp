@@ -21,17 +21,15 @@ class SUB{
 SUB::SUB(){
 
     nh = ros::NodeHandle("~");
-
     time_sub = nh.subscribe<std_msgs::String>("/time_publisher/ros_time", 10, boost::bind(&SUB::messageCallback, this, _1));
 }
 
-SUB::~SUB(){
-
-};
+SUB::~SUB(){};
 
 int SUB::messageCallback(const std_msgs::StringConstPtr &msg){
 
     std::cout << msg->data << std::endl;
+    return 0;
 }
 
 int main(int argc, char **argv){

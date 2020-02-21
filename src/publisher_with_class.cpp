@@ -33,22 +33,17 @@ int PUB::task(){
 
     while(ros::ok()){
 
-        std_msgs::String msg;
-        
+        std_msgs::String msg;        
         std::stringstream ss;
-
-        time_sec =  std::to_string(ros::Time::now().sec);
         
+        time_sec =  std::to_string(ros::Time::now().sec);        
         time_nsec =  std::to_string(ros::Time::now().nsec);
-
         ss << time_sec << "."<< time_nsec;
 
         msg.data = ss.str();
-
         time_pub.publish(msg);
 
         ros::spinOnce();
-
         taskRate.sleep();
     }
 
